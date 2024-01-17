@@ -12,7 +12,7 @@ int unrecognizedCount = 0;
 %}
 
 %%
-"if"|"else"|"while"|"do"|"break"|"continue"|"int"|"double"|"float"|"return"|"char"|"case"|"sizeof"|"long"|"short"|"typedef"|"switch"|"unsigned"|"void"|"static"|"struct"|"goto" { printf("KEYWORD: %s\n", yytext); keywordCount++; }
+"auto"|"break"|"default"|"const"|"void"|"union"|"extern"|"if"|"else"|"while"|"do"|"break"|"continue"|"int"|"double"|"float"|"return"|"char"|"case"|"sizeof"|"long"|"short"|"typedef"|"switch"|"unsigned"|"void"|"static"|"struct"|"goto" { printf("KEYWORD: %s\n", yytext); keywordCount++; }
 \"[^\n\"]*\"    { printf("STRING: %s\n", yytext); stringCount++; }
 [0-9]+          { printf("CONSTANT: %s\n", yytext); constantCount++; }
 [a-zA-Z_][a-zA-Z0-9_]* { printf("IDENTIFIER: %s\n", yytext); identifierCount++; }
