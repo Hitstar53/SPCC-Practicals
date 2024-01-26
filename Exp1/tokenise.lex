@@ -18,7 +18,7 @@ int unrecognizedCount = 0;
 [a-zA-Z_][a-zA-Z0-9_]* { printf("IDENTIFIER: %s\n", yytext); identifierCount++; }
 [ \t\n]         /* Ignore whitespace */
 [{}()[\],;.]    { printf("SPECIAL SYMBOL: %s\n", yytext); specialSymbolCount++; }
-[-+*/%=&|^<>!~]  { printf("OPERATOR: %s\n", yytext); operatorCount++; }
+[+\-*/%&|!<>^=]=? { printf("OPERATOR: %s\n", yytext); operatorCount++; }
 [@.]               { printf("UNRECOGNIZED: %s\n", yytext); unrecognizedCount++; }
 %%
 
