@@ -143,6 +143,6 @@ class MacroProcessor:
 if __name__ == "__main__":
     mp = MacroProcessor()
     print("\nPass 1 in progress\n")
-    mp.pass1("input.asm")
+    mp.pass1("./Exp9/input.asm")
     print("\nPass 2 in progress\n")
-    mp.pass2("input.asm")
+    mp.pass2("./Exp9/input.asm")
